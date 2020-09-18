@@ -8,7 +8,7 @@ public class Main {
         Map<String, String> usersMap = new HashMap<>();
         Map<String, String> users = new HashMap<>();
         List<String> tokens = new LinkedList<>();
-        new BufferedReader(new InputStreamReader(System.in)).lines()
+        new BufferedReader(new InputStreamReader(StdIn)).lines()
                 .map(str -> Arrays.asList(str.split(",|->"))).forEach(tokens::addAll);
         String[] user = new String[1];
         tokens.stream().map(String::trim)
