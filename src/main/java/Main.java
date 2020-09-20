@@ -1,3 +1,5 @@
+import service.StdIn;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
@@ -8,7 +10,7 @@ public class Main {
         Map<String, String> usersMap = new HashMap<>();
         Map<String, String> users = new HashMap<>();
         List<String> tokens = new LinkedList<>();
-        new BufferedReader(new InputStreamReader(StdIn)).lines()
+        new StdIn().ask("Введите данные или пустую строку для окончания").stream()
                 .map(str -> Arrays.asList(str.split(",|->"))).forEach(tokens::addAll);
         String[] user = new String[1];
         tokens.stream().map(String::trim)
