@@ -1,8 +1,8 @@
 package service;
 
+import java.io.InputStream;
 import java.util.List;
 
 public interface in {
-    List<String> ask(String question);
-    String answer(String answer);
+    List<String> ask(InputStream question);
 }
